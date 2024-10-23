@@ -1,0 +1,28 @@
+//{ Driver Code Starts
+//Initial template for JAVA
+
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+
+// } Driver Code Ends
+//User function template for JAVA
+
+class Solution
+{
+    //Function to check if a string is Pangram or not.
+    public static boolean checkPangram  (String s) {
+        // your code here
+       //Function to check if a string is Pangram or not.
+        String x = "abcdefghijklmnopqrstuvwxyz";
+        s = s.toLowerCase();
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (Character.isLetter(ch)) {
+                x = x.replace(String.valueOf(ch), "");
+            }
+        }
+        return x.isEmpty();
+    }
+}
